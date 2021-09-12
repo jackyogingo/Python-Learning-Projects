@@ -1,0 +1,134 @@
+# create the initial variables below.
+#Our first step is to create the variables for each factor we will consider when estimating medical insurance costs.
+#These are the variables we will need to create:
+
+#age: age of the individual in years
+#sex: 0 for female, 1 for male*
+#bmi: individual’s body mass index
+#num_of_children: number of children the individual has
+#smoker: 0 for a non-smoker, 1 for a smoker
+#Create the following variables for a 28-year-old, nonsmoking woman who has three children and a BMI of 26.2.
+
+age = 28
+
+#sex is 0 for female and 1 for male
+sex = 0
+
+#smoker is 0 for non and 1 for smoker
+smoker = 0
+
+num_of_children = 3
+
+bmi = 26.2
+
+
+# After the declaration of the variables, create a variable called insurance_cost that utilizes the following formula:
+#Add insurance estimate formula below
+
+insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+
+#Let’s display this value in an informative way. Print out the following string in the terminal:
+
+
+print("This person's insurance cost is " + str(insurance_cost) + " dollars.")
+
+
+#We have seen how our formula can estimate costs for one individual. Now let’s play with some individual factors to see what role each one plays in our estimation!
+#Let’s start with the age factor. Using a plus-equal operator, add 4 years to our age variable.
+
+# Age Factor
+
+age += 4
+
+
+
+#Now that we have changed our age value, we want to recalculate our insurance cost. Declare a new variable called new_insurance_cost underneath the expression that increased age by 4.
+#Make sure you leave the line with the insurance_cost variable the same. We will use it later in our program!
+
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+
+
+#Next, we want to find the difference between our new_insurance_cost and insurance_cost. To do this, let’s create a new variable called change_in_insurance_cost and set it equal to the difference between new_insurance_cost and insurance_cost
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+
+
+
+# We want to display this information in an informative way similar to the output from instruction 3.
+# Doing this will tell us how 4 years in age affects medical insurance cost estimates assuming that all other variables remain the same.
+
+print("The change in cost of insurance after increasing the age by 4 years is " + str(change_in_insurance_cost) + " dollars.")
+
+
+#reassigning age to its original value 
+
+age -= 4
+
+
+# BMI Factor
+# On the next line, using the plus-equal operator, add 3.1 to our bmi variable.
+
+bmi += 3.1
+
+
+# rewrite the insurance cost formula and assign it to the variable name new_insurance_cost.
+
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+
+print("The change in estimated insurance cost after increasing BMI by 3.1 is " + str(change_in_insurance_cost) + "dollars.")
+
+
+#reassigning age to its original value
+#Before we make any additional changes, first reassign your bmi variable back to its original value of 26.2
+
+bmi -= 3.1
+
+
+# Male vs. Female Factor
+# Let’s look at the effect sex has on medical insurance costs. .
+
+# On a new line of code, reassign the value of sex to 1. 
+# sex is 0 for female and 1 for male
+
+sex = 1
+
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+
+print("The change in estimated cost for being male instead of female is " + str(change_in_insurance_cost) + " dollars.")
+
+
+sex = 0
+
+# So far we have looked at 3 of the 5 factors in the insurance costs formula. The two remaining are smoker and num_of_children. If you want to keep challenging yourself, spend some time investigating these factors!
+# Rewrite the insurance cost formula and assign it to the variable name new_insurance_cost.
+# Save the difference between new_insurance_cost and insurance_cost in a variable called change_in_insurance_cost
+
+
+#smoking factor:
+#smoker is 0 for non and 1 for smoker
+
+smoker = 1
+
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+
+print("The change in estimated cost for a smoker  is " + str(change_in_insurance_cost) + " dollars.")
+
+
+
+# number of children 
+
+num_of_children += 2
+
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+
+print("The change in estimated cost for an individual with 5 children is " + str(change_in_insurance_cost) + " dollars.")
