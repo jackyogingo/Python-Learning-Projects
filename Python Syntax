@@ -132,3 +132,4 @@ new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children +
 change_in_insurance_cost = new_insurance_cost - insurance_cost
 
 print("The change in estimated cost for an individual with 5 children is " + str(change_in_insurance_cost) + " dollars.")
+
