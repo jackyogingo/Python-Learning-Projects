@@ -1,5 +1,3 @@
-import codecademylib
-
 # First, import numpy
 
 import numpy as np
