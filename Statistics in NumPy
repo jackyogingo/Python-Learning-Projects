@@ -1,0 +1,48 @@
+import numpy as np
+
+#A group of citizen scientists has been collecting data on rainfall in Nairobi. They’ve presented their data to you in the form of monthly averages, measured in inches.
+
+rainfall = np.array([5.21, 3.76, 3.27, 2.35, 1.89, 1.55, 0.65, 1.06, 1.72, 3.35, 4.82, 5.11])
+
+
+#Find the mean of the rainfall array and save it to the variable rain_mean.
+
+rain_mean = np.mean(rainfall)
+
+
+#Find the median of the rainfall array and save it to the variable rain_median.
+
+rain_median = np.median(rainfall)
+
+
+#Find the 25th and the 75th percentiles of the original rainfall array and save them to the arrays first_quarter and third_quarter, respectively.
+
+first_quarter = np.percentile(rainfall, 25)
+
+third_quarter = np.percentile(rainfall, 75)
+
+
+#Calculate the interquartile range and save it to the variable, interquartile_range.
+
+interquartile_range = third_quarter - first_quarter
+
+
+#Determine the standard deviation of the set and save it to the variable rain_std.
+
+rain_std = np.std(rainfall)
+
+
+#Print the variables to the terminal to see your results.
+
+print(rain_mean)
+
+print(rain_median)
+
+print(first_quarter)
+
+print(third_quarter)
+
+print(interquartile_range)
+
+print(rain_std)
+
